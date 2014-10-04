@@ -24,8 +24,12 @@ This library, for now, is entirely based on how I intend to use this library (ma
 # Usage
 
 Require `pani`:
-
-    (:require [pani.core])
+```clojure
+;; Clojurescript 
+(:require [pani.cljs.core])
+;; Clojure
+(:require [pani.clojure.core])
+```
     
 Create a root object:
 
