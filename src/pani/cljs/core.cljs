@@ -19,9 +19,10 @@
   "Takes korks and reduces it to a root on which we can perform direct actions"
   (let [p (if (sequential? korks)
             (apply str (interpose "/" (map clojure.core/name korks)))
-            (clojure.core/name korks))]
-    (.child root p)))
-
+            (if korks (clojure.core/name korks)))]
+    (if (empty? p)
+      root
+      (.child root p))))
 
 (defn name [r]
   "Get the name of the given root"
@@ -63,6 +64,11 @@
   ([root korks val]
    (fb-call! #(.set %1 %2) root korks val)))
 
+(defn remove!
+  "Removes the data at this location"
+  ([root] (.remove root))
+  ([root korks] (.remove (walk-root root korks))))
+
 (defn push!
   "Set the value at the given root"
   ([root val]
@@ -80,7 +86,7 @@
 
   ([root type korks cb]
    (let [c (walk-root root korks)]
-     (.on c (clojure.core/name type) 
+     (.on c (clojure.core/name type)
           #(when-let [v (clj-val %1)]
              (cb {:val v, :name (name %1)}))))))
 
