@@ -64,6 +64,11 @@
   ([root korks val]
    (fb-call! #(.set %1 %2) root korks val)))
 
+(defn remove!
+  "Removes the data at this location"
+  ([root] (.remove root))
+  ([root korks] (.remove (walk-root root korks))))
+
 (defn push!
   "Set the value at the given root"
   ([root val]
