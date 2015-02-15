@@ -1,5 +1,8 @@
 # Pani
 
+***Deprecation Warning:  A fork of this project is under active development here: https://github.com/crisptrutski/sunog .The future of pani itself is undecided at this time.***
+
+
 A convenience library to access Firebase from Clojurescript.
 
 [![Build Status](https://travis-ci.org/verma/pani.svg)](https://travis-ci.org/verma/pani)
