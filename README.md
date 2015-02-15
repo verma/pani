@@ -12,6 +12,11 @@ The library is in its formative years.  The current version is `0.0.3`.
 
 [![Clojars Project](http://clojars.org/pani/latest-version.svg)](http://clojars.org/pani)
 
+## NOTE RE: JVM USAGE
+
+The API available in regular Clojure has fallen considerably behind, and not all the examples below will be runnable.
+
+Rather than maintaining it separately going forward, in version `0.0.5` the `pani.core` namespace will be portable, and `pani.clojure.core` will be removed.
 
 # Features
 
