@@ -1,6 +1,6 @@
 # Pani
 
-***Deprecation Warning:  A fork of this project is under active development here: https://github.com/crisptrutski/sunog .The future of pani itself is undecided at this time.***
+***Deprecation Warning:  A fork of this project is under active development here: https://github.com/crisptrutski/matchbox .The future of pani itself is undecided at this time.***
 
 
 A convenience library to access Firebase from Clojurescript.
